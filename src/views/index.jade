@@ -1,0 +1,19 @@
+//-
+//- NOTE: This file will/should be replaced with
+//-       a server-side rendered react component 'html'
+//-
+html
+	head
+		title="Bookclub"
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+
+		body
+			#app!= "index.jade"
+
+		each source in script_source
+			script(src=source, defer)
