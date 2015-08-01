@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 
 var app = express();
+var log = require('debug')('bookclub:server');
 
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
@@ -24,3 +25,4 @@ app.get('/', function (req, res) {
 });
 
 app.listen(3000);
+log('Server listening on port 3000');

@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 
+var log = require('debug')('bookclub:App');
+
 const styles = require('./app.scss');
 
 class App extends Component {
@@ -8,6 +10,7 @@ class App extends Component {
 	}
 
 	render() {
+		log('render');
 		return (
 			<div>
 				<div className="mod_app">Test</div>
