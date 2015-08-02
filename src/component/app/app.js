@@ -15,12 +15,12 @@ class App extends Component {
 	}
 
 	render() {
-		log('render');
+		log('render', this.props);
     	const { books } = this.props;
 		return (
 			<div>
 				<div className="mod_app">Test</div>
-				<Booklist books={books}/>
+				<Booklist list={books.list}/>
 	        </div>
 		);
 	}

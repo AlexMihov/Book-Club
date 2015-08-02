@@ -6,7 +6,7 @@ const styles = require('./booklist.scss');
 
 class Booklist extends Component {
 	static propTypes = {
-		books: PropTypes.array
+		list: PropTypes.array
 	}
 
 	render() {
@@ -14,7 +14,7 @@ class Booklist extends Component {
 		return (
 			<div className="mod_booklist">
 				<ul>
-					{this.props.books.map((o, i) => <li>{o} {i}</li>)}
+					{this.props.list.map((o, i) => <li key={o.id}>{o} {i}</li>)}
 				</ul>
 			</div>
 
