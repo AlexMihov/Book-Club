@@ -69,6 +69,7 @@
     "redux": "^1.0.0-rc",
     "redux-actions": "^0.7.0",
     "redux-devtools": "^0.1.2",
+    "redux-promise": "^0.5.0",
     "rethinkdb": "^2.0.2",
     "sass-loader": "^1.0.3",
     "strip-loader": "^0.1.0",

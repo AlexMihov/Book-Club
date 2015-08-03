@@ -1,5 +1,6 @@
 /* global __DEVELOPMENT__, __CLIENT__, __DEVTOOLS__ */
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import promiseMiddleware from 'redux-promise';
 // import createMiddleware from './clientMiddleware';
 // import * as reducers from '../reducers/index';
 // const reducer = combineReducers(reducers);
@@ -7,7 +8,9 @@ const { devTools, persistState } = require('redux-devtools');
 //
 //
 //
+
 let finalCreateStore = compose(
+	applyMiddleware(promiseMiddleware),
 	devTools(),
 	persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/)),
 	createStore
